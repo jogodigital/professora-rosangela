@@ -1,0 +1,202 @@
+:root{
+      --sky-top: #b8e3ff;   /* céu claro */
+      --sky-mid: #8ed0ff;   /* céu médio */
+      --sky-bottom: #dff4ff;/* neblina */
+      --sea: #77baff;
+      --sun: #ffe066;
+      --ink: #14213d;
+      --ink-70: rgba(20, 33, 61, .7);
+      --brand: #2a9d8f;
+      --brand-accent: #ffd166;
+      --card: #ffffff;
+      --muted: #6582a6;
+      --shadow: 0 10px 30px rgba(17, 37, 64, .12);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1100px 300px at 80% -80%, var(--sun) 0%, rgba(255,224,102,0.25) 35%, rgba(255,224,102,0) 60%),
+        linear-gradient(to bottom, var(--sky-top) 0%, var(--sky-mid) 45%, var(--sky-top) 100%);
+      overflow-x: hidden;
+    }
+
+    /* ====== Layout básico ====== */
+    .container{ width: min(1200px, 92vw); margin: 0 auto; }
+
+    header{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(150%) blur(6px);
+      background: linear-gradient(to bottom, rgba(255,255,255,.75), rgba(255,255,255,.45));
+      box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    }
+    .topbar{ display: flex; align-items:center; justify-content:space-between; padding: 0px 0; }
+    .logo{ display:flex; align-items:center; gap:10px; text-decoration:none; color: var(--ink); font-weight:800; letter-spacing:.2px; }
+    .logo svg{ width: 38px; height: 38px; }
+
+    nav ul{ list-style: none; padding: 0; margin: 0; display:flex; gap: 18px; align-items:center; }
+    nav a{
+      text-decoration: none; font-weight:700; color: var(--ink);
+      padding: 8px 30px; border-radius: 999px; transition: transform .2s ease, background .2s ease;      
+    }
+
+    nav a.n1{
+      background: #ffc000;
+    }
+    nav a.n1:hover
+    {
+      background: #fadc82;
+    }
+    nav a.n2{
+      background: #ff6501;
+    }
+    nav a.n2:hover
+    {
+      background: #ffa163;
+    }
+
+    /* ====== Hero ====== */
+    .hero{ position: relative; padding: clamp(38px, 6vw, 60px) 0 40px; }
+    .hero .grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items:center; }
+    .headline{ font-size: clamp(28px, 3.6vw, 46px); line-height: 1.05; margin: 0 0 10px; font-weight: 900; }
+    .sub{ font-size: clamp(16px, 2.1vw, 20px); color: var(--ink-70); margin: 0 0 10px; }
+
+    .cta-row{ display:flex; flex-wrap: wrap; gap: 12px; align-items:center; }
+    .btn{ display:inline-flex; align-items:center; gap:10px; border-radius: 999px; padding: 12px 18px; font-weight:800; text-decoration:none; box-shadow: var(--shadow); border: 0px solid rgba(0,0,0,.05); }
+    
+    .btn.primary:hover{ background: linear-gradient(135deg, #64bbf7 0%, #9fd7ff 100%); }
+    .btn.secondary:hover{ background: linear-gradient(135deg, #4abcae 0%, #67dcd0 100%); }
+
+    .mockup{ background: rgba(255,255,255,.7); border-radius: var(--radius-xl); padding: 16px; box-shadow: var(--shadow); }
+    .mockup-inner{ aspect-ratio: 16/10; border-radius: var(--radius-lg); background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%); position: relative; overflow: hidden; }
+
+    /* ====== Cards ====== */
+    .section{ padding: 32px 0 70px; position: relative; }
+    .section h2{ font-size: clamp(22px, 2.8vw, 32px); margin: 0 0 18px; }
+    
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* duas colunas */
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Badge no topo à direita */
+.card .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: crimson;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Botão play no canto inferior direito */
+.card .btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  width: 60px;   /* largura fixa */
+  height: 60px;  /* altura fixa */
+  border-radius: 50%;
+
+  background: red;
+  border: 3px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0; /* remove padding herdado */
+  box-shadow: var(--shadow);
+
+  transition: transform 0.2s ease;
+}
+
+.card .btn svg {
+  width: 64px;
+  height: 64px;
+  color: white;
+}
+
+/* Efeito hover - aumenta de tamanho */
+.card .btn:hover {
+  transform: scale(1.2);
+}
+
+.card .badge.primary 
+{
+  background: crimson; 
+}
+.card .badge.secondary 
+{
+  background: orange; 
+}
+
+.card .btn.primary
+{
+  background: linear-gradient(135deg, #40aefb 0%, #75c6ff 100%); 
+  color: #fff; 
+  transition: transform .2s ease, background .2s ease;
+}
+.card .btn.secondary
+{
+  background: linear-gradient(135deg, var(--brand) 0%, #43c2b5 100%); 
+  color: #fff; 
+  transition: transform .2s ease, background .2s ease;
+}
+
+    section#jogos
+    {
+      padding-top: 0;
+      padding-bottom: 380px;
+    }
+
+    /* ====== Rodapé ====== */
+    footer{ position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,.6); padding: 26px 0 40px; border-top: 1px dashed rgba(0,0,0,.08); }
+    .foot-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }
+    .foot small{ color: var(--muted); }
+    footer small a{ color: var(--muted); }
+
+    /* ====== SVG de fundo ====== */
+    .bg-stage{
+      position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: visible;
+    }
+    .ground-gradient{
+      position: fixed; left: 0; right: 0; bottom: 0; height: 22vh; z-index: -1;
+      background: linear-gradient(to top, rgba(120, 184, 255, .25), rgba(120, 184, 255, 0));
+    }
+
+    /* ====== Responsividade ====== */
+    @media (max-width: 980px){
+      .hero .grid{ grid-template-columns: 1fr; }
+      .cards{ grid-template-columns: repeat(2, 1fr); } /* duas colunas até 980px */
+      .foot-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px){
+      nav ul{ display:none; }
+      .cards{ grid-template-columns: 1fr; } /* vira uma coluna no mobile */
+    }

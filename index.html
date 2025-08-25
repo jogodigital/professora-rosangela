@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professora Rosângela • Jogos Eduactivos</title>
+  <meta name="description" content="Layout educativo inspirado em LudoEducativo, com fundo ilustrado (nuvens, amarelinha) e degradê de céu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <!-- CAMADA SVG DE FUNDO: nuvens animadas e amarelinha -->
+  <svg class="bg-stage" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <!-- Desenho de uma nuvem fofinha -->
+      <g id="cloud-shape">
+        <path d="
+          M60 60
+          C50 40, 80 20, 110 30
+          C120 10, 160 10, 170 30
+          C200 20, 230 40, 220 60
+          C240 80, 210 100, 180 90
+          C160 110, 120 110, 100 90
+          C70 100, 40 80, 60 60
+          Z"
+          fill="white" opacity="0.9"/>
+      </g>     
+
+      <pattern id="diagonal" patternUnits="userSpaceOnUse" width="8" height="8">
+        <path d="M-2,2 l4,-4 M0,8 l8,-8 M6,10 l4,-4" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+      </pattern>
+    </defs>
+
+    <!-- Nuvens: serão clonadas e animadas via JS -->
+    <g id="clouds"></g>
+
+    <!-- Sol discreto -->
+    <circle cx="1250" cy="-120" r="220" fill="url(#sunGrad)" opacity="0.18"/>
+    <defs>
+      <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffe066"/>
+        <stop offset="100%" stop-color="#ffe066" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+  </svg>
+  <div class="ground-gradient" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container topbar">
+      <a class="logo" href="#" aria-label="Página inicial">
+        <!-- Logotipo simples -->
+        <img src="images/logo-rosangela.png" width="80">
+        <span>Profª Rosângela</span>
+      </a>
+      <nav aria-label="principal">
+        <ul>
+          <li><a href="#" class="n1">INÍCIO</a></li>
+          <li><a href="#jogos" class="n2">JOGOS</a></li>         
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container grid">
+      <div>
+        <h1 class="headline">Afabetização Divertida ✨</h1>
+        <p class="sub">Jogos educativos gratuitos para alunos com TEA e dificuldade de aprendizado. Sem anúncios, só aprendizado com diversão!</p>        
+      </div>      
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE JOGOS -->
+  <section id="jogos" class="section">
+    <div class="container">
+      <h2>Jogos em destaque</h2>
+      <div class="cards">
+        <!-- Card 1 -->
+        <article class="card" role="article">
+          <div class="badge primary">PORTUGUÊS</div>
+          <img src="images/game-header.png" />
+          <a class="btn primary" href="#"><svg width="60" height="60" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a>
+        </article>
+        <!-- Card 2 -->
+        <article class="card" role="article">
+          <div class="badge secondary">MATEMÁTICA</div>
+          <img src="images/game-header.png" />
+          <a class="btn secondary" href="#"><svg width="60" height="60" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a>
+        </article>        
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container foot-grid">
+      <div>
+        <strong>Profª Rosângela</strong>
+        <p class="meta">Jogos educativos gratuitos para alunos com TEA e dificuldade de aprendizado.</p>
+        <small>© 2025 Profª Rosângela. Todos os direitos reservados.</small>
+      </div>
+      <div>        
+        <strong>Desenvolvimento</strong>
+        <p class="meta">Pixside Games</p>
+        <small><a href="https://pixside.com.br" target="_blank">pixside.com.br</a></small>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
