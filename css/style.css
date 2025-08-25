@@ -17,6 +17,9 @@
     }
 
     * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     html, body { height: 100%; }
     body{
       margin: 0;
@@ -44,7 +47,7 @@
     nav ul{ list-style: none; padding: 0; margin: 0; display:flex; gap: 18px; align-items:center; }
     nav a{
       text-decoration: none; font-weight:700; color: var(--ink);
-      padding: 8px 30px; border-radius: 999px; transition: transform .2s ease, background .2s ease;      
+      padding: 8px 30px; border-radius: 999px; transition: padding .2s ease, background .2s ease;      
     }
 
     nav a.n1{
@@ -53,6 +56,7 @@
     nav a.n1:hover
     {
       background: #fadc82;
+      padding: 8px 40px;
     }
     nav a.n2{
       background: #ff6501;
@@ -60,6 +64,7 @@
     nav a.n2:hover
     {
       background: #ffa163;
+      padding: 8px 40px;
     }
 
     /* ====== Hero ====== */
@@ -172,14 +177,25 @@
     section#jogos
     {
       padding-top: 0;
-      padding-bottom: 380px;
+      padding-bottom: 100px;
     }
 
     /* ====== Rodapé ====== */
-    footer{ position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,.6); padding: 26px 0 40px; border-top: 1px dashed rgba(0,0,0,.08); }
-    .foot-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }
-    .foot small{ color: var(--muted); }
-    footer small a{ color: var(--muted); }
+    footer
+    { 
+      position: fixed; 
+      bottom: 0; 
+      left: 0; 
+      right: 0; 
+      text-align: center; 
+      background: rgba(255,255,255,.6); 
+      padding: 5px; 
+      border-top: 1px dashed rgba(0,0,0,.08); 
+    }
+    .foot small
+    { 
+      color: var(--muted); 
+    }
 
     /* ====== SVG de fundo ====== */
     .bg-stage{

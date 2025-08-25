@@ -57,7 +57,7 @@
       </a>
       <nav aria-label="principal">
         <ul>
-          <li><a href="#" class="n1">INÍCIO</a></li>
+          <li><a href="#inicio" class="n1">INÍCIO</a></li>
           <li><a href="#jogos" class="n2">JOGOS</a></li>         
         </ul>
       </nav>
@@ -65,7 +65,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section id="inicio" class="hero">
     <div class="container grid">
       <div>
         <h1 class="headline">Afabetização Divertida ✨</h1>
@@ -81,15 +81,19 @@
       <div class="cards">
         <!-- Card 1 -->
         <article class="card" role="article">
-          <div class="badge primary">PORTUGUÊS</div>
-          <img src="images/game-header.png" />
-          <a class="btn primary" href="#"><svg width="60" height="60" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a>
+          <a href="#">
+            <div class="badge primary">PORTUGUÊS</div>
+            <img src="images/game-header.png" />
+            <a class="btn primary" href="#"><svg width="60" height="60" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a>
+          </a>
         </article>
         <!-- Card 2 -->
         <article class="card" role="article">
-          <div class="badge secondary">MATEMÁTICA</div>
-          <img src="images/game-header.png" />
-          <a class="btn secondary" href="#"><svg width="60" height="60" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a>
+          <a href="#">
+            <div class="badge secondary">MATEMÁTICA</div>
+            <img src="images/game-header.png" />
+            <a class="btn secondary" href="#"><svg width="60" height="60" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a>
+          </a>
         </article>        
       </div>
     </div>
@@ -97,17 +101,8 @@
 
   <!-- RODAPÉ -->
   <footer>
-    <div class="container foot-grid">
-      <div>
-        <strong>Profª Rosângela</strong>
-        <p class="meta">Jogos educativos gratuitos para alunos com TEA e dificuldade de aprendizado.</p>
-        <small>© 2025 Profª Rosângela. Todos os direitos reservados.</small>
-      </div>
-      <div>        
-        <strong>Desenvolvimento</strong>
-        <p class="meta">Pixside Games</p>
-        <small><a href="https://pixside.com.br" target="_blank">pixside.com.br</a></small>
-      </div>
+    <div class="container foot-grid">            
+      <small>© 2025 Profª Rosângela. Todos os direitos reservados.</small>
     </div>
   </footer>
   <script type="text/javascript" src="js/script.js"></script>
