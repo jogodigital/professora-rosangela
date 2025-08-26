@@ -3,6 +3,31 @@
   const svg = document.querySelector('.bg-stage');
   const layer = document.getElementById('clouds');
 
+  const modal = document.getElementById("gameModal");
+  const gameFrame = document.getElementById("gameFrame");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Ao clicar no card de português
+  document.querySelector(".card .btn.primary").addEventListener("click", function(e){
+    e.preventDefault();
+    gameFrame.src = "games/pt1/index.html"; // carrega o jogo de português
+    modal.style.display = "flex";
+  });
+
+  // Fechar modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    gameFrame.src = ""; // limpa para parar o jogo
+  });
+
+  // Fechar ao clicar fora do jogo
+  window.addEventListener("click", (e) => {
+    if(e.target === modal){
+      modal.style.display = "none";
+      gameFrame.src = "";
+    }
+  });
+
   function spawnCloud({y=100, scale=1, speed=20}={}){
     const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
     use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#cloud-shape');
