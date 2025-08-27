@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Alfaletrar</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="TemplateData/style.css?v=1">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -52,14 +52,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Build.loader.js";
+      var loaderUrl = buildUrl + "/Build.loader.js?v=1";
       var config = {
         arguments: [],
         dataUrl: buildUrl + "/Build.data",
-        frameworkUrl: buildUrl + "/Build.framework.js",
+        frameworkUrl: buildUrl + "/Build.framework.js?v=1",
         codeUrl: buildUrl + "/Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "PixsideGames",
+        companyName: "Pixside Games",
         productName: "Alfaletrar",
         productVersion: "1.0",
         showBanner: unityShowBanner,
@@ -98,8 +98,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "860px";
+        canvas.style.height = "500px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";

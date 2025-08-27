@@ -256,8 +256,16 @@ footer
   .hero .grid{ grid-template-columns: 1fr; }
   .cards{ grid-template-columns: repeat(2, 1fr); } /* duas colunas até 980px */
   .foot-grid{ grid-template-columns: 1fr; }
+  .close-btn {
+    left: 20px;  
+    font-size: 1rem;
+  }
 }
 @media (max-width: 640px){
   nav ul{ display:none; }
   .cards{ grid-template-columns: 1fr; } /* vira uma coluna no mobile */
+  .close-btn {
+    left: 20px; 
+    font-size: 1rem; 
+  }
 }
