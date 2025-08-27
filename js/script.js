@@ -7,8 +7,18 @@
   const gameFrame = document.getElementById("gameFrame");
   const closeBtn = document.getElementById("closeModal");
 
+  function isMobile() 
+  {
+    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+  }
+
+  if (isMobile() || window.innerHeight > window.innerWidth) 
+  {
+    closeBtn.innerHTML = "SAIR DO GAME";
+  }
+
   // Ao clicar no card de português
-  document.querySelector(".card .btn.primary").addEventListener("click", function(e){
+  document.querySelector(".game-pt1").addEventListener("click", function(e){
     e.preventDefault();
     gameFrame.src = "games/pt1/index.html"; // carrega o jogo de português
     modal.style.display = "flex";
