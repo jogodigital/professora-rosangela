@@ -7,15 +7,15 @@
   const gameFrame = document.getElementById("gameFrame");
   const closeBtn = document.getElementById("closeModal");
 
-  function isMobile() 
+  /*function isMobile() 
   {
     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
   }
 
   if (isMobile() || window.innerHeight > window.innerWidth) 
   {
-    closeBtn.innerHTML = "SAIR DO GAME";
-  }
+    closeBtn.innerHTML = "&times";
+  }*/
 
   // Ao clicar no card de português
   document.querySelector(".game-pt1").addEventListener("click", function(e){
