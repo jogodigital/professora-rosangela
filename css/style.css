@@ -270,7 +270,7 @@ footer
   nav ul{ display:none; }
   .cards{ grid-template-columns: 1fr; } /* vira uma coluna no mobile */
   .close-btn {
-    max-width: 150px;
+    max-width: 50px;
     top: 5px;
     left: 5px;
     font-size: 1rem; 
