@@ -7,20 +7,17 @@
   const gameFrame = document.getElementById("gameFrame");
   const closeBtn = document.getElementById("closeModal");
 
-  /*function isMobile() 
-  {
-    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-  }
-
-  if (isMobile() || window.innerHeight > window.innerWidth) 
-  {
-    closeBtn.innerHTML = "&times";
-  }*/
-
   // Ao clicar no card de português
   document.querySelector(".game-pt1").addEventListener("click", function(e){
     e.preventDefault();
     gameFrame.src = "games/pt1/index.html"; // carrega o jogo de português
+    modal.style.display = "flex";
+  });
+
+  // Ao clicar no card de matemática
+  document.querySelector(".game-mt1").addEventListener("click", function(e){
+    e.preventDefault();
+    gameFrame.src = "games/mt1/index.html"; // carrega o jogo de português
     modal.style.display = "flex";
   });
 
