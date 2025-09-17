@@ -23,7 +23,7 @@ html {
 html, body { height: 100%; }
 body{
   margin: 0;
-  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Nunito, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   color: var(--ink);
   background:
   radial-gradient(1100px 300px at 80% -80%, var(--sun) 0%, rgba(255,224,102,0.25) 35%, rgba(255,224,102,0) 60%),
@@ -194,7 +194,7 @@ footer
   border-top: 1px dashed rgba(0,0,0,.08); 
 }
 .foot small
-{ 
+{   
   color: var(--muted); 
 }
 
